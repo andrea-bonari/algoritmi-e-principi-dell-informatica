@@ -4,4 +4,4 @@ Il corso di Algoritmi e Principi dell'Informatica è suddiviso in due moduli pri
 2. [[Modelli]]
 	1. [[Linguaggio formale]]
 	2. [[Automi a stati finiti]]
-	3. [[Automi a pila]]
+		1. [[Automi a pila]]
