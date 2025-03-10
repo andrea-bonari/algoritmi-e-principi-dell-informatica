@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Informatica teorica/Modelli formali di calcolo/Modelli.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Modelli"
             }
           }
         ]
@@ -168,13 +168,13 @@
   },
   "active": "124e971d40339bf2",
   "lastOpenFiles": [
+    "index.md",
     "Informatica teorica/Modelli formali di calcolo/Modelli.md",
     "Informatica teorica/Modelli formali di calcolo/Linguaggio formale.md",
     "Informatica teorica/Modelli formali di calcolo/Automi a stati finiti.md",
     "Informatica teorica/Modelli formali di calcolo/Automi a pila.md",
     "data/Pasted image 20250310185230.png",
     "Untitled.md",
-    "index.md",
     "data/Pasted image 20250303165844.png",
     "data",
     "Introduzione al corso.md",
