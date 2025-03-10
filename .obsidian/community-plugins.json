@@ -8,5 +8,6 @@
   "obsidian-desmos",
   "obsidian-remarkable",
   "math-in-callout",
-  "highlightr-plugin"
+  "highlightr-plugin",
+  "code-emitter"
 ]

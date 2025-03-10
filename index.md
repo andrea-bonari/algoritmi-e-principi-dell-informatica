@@ -1,3 +1,7 @@
 Il corso di Algoritmi e Principi dell'Informatica è suddiviso in due moduli principali. Il primo modulo tratta l'informatica teorica. In questa parte si introducono i principali modelli dell'informatica, come gli automi a stati finiti, automi a pila e le Macchine di Turing, insieme a modelli non deterministici e grammatiche. Viene inoltre presentata la logica matematica, utilizzata per modellare sistemi e descriverne le proprietà. La teoria della computazione viene approfondita attraverso la discussione della potenza dei modelli di calcolo, della Tesi di Church e dei problemi indecidibili, con tecniche per dimostrare l'indecidibilità di alcuni problemi. Il secondo modulo è dedicato agli algoritmi e alla teoria della complessità. Si affrontano le nozioni fondamentali per l'analisi della complessità, i modelli di calcolo e la macchina RAM, con approfondimenti sulla gerarchia delle complessità e sulla NP-completezza. Successivamente, vengono studiate le principali strutture dati, come pile, code, alberi binari, alberi generici, BST e heap, con relativi algoritmi di gestione e visita. Si esaminano inoltre gli algoritmi di ordinamento e le soluzioni al problema della ricerca, con tecniche basate su tabelle di hash e alberi B e B+. Infine, si esplorano i grafi, la loro rappresentazione e i principali algoritmi per la loro gestione.
 
 1. [[Introduzione al corso]]
+2. [[Modelli]]
+	1. [[Linguaggio formale]]
+	2. [[Automi a stati finiti]]
+	3. [[Automi a pila]]

@@ -1,5 +1,5 @@
 ## Obiettivi dell'insegnamento
-L'informatica ha subito un’evoluzione estremamente rapida dai suoi albori ai giorni d’oggi. Ciò ha prodotto notevoli benefici alla qualità della vita ma ha anche creato problemi legati all’affidabilità dei sistemi informatici. Spesso infatti le tecniche di progetto adottate si sono rivelate inadeguate alla complessità dei problemi affrontati. Da più parti si è individuata, tra le cause principali della scarsa affidabilità dei sistemi informatici, la mancanza di solidi principi teorici su cui basare le tecniche di progettazione. Il corso di algoritmi e principi dell'informatica ha lo scopo di colmare questa lacuna affrontando in maniera sistematica i problemi fondamentali dell’informatica e mettendo in evidenza come un approccio rigoroso e basato sui fondamenti teorici della disciplina abbia grande rilevanza nelle applicazioni pratiche. Soprattutto il corso intende sviluppare l'attitudine ad affrontare problemi nuovi e non ben precisati e ricavarne un modello preciso e adatto all'individuazione della miglior (o adeguata) soluzione.
+L'informatica ha subito un’evoluzione estremamente rapida dai suoi albori ai giorni d’oggi. Ciò ha prodotto notevoli benefici alla qualità della vita ma ha anche creato problemi legati all'affidabilità dei sistemi informatici. Spesso infatti le tecniche di progetto adottate si sono rivelate inadeguate alla complessità dei problemi affrontati. Da più parti si è individuata, tra le cause principali della scarsa affidabilità dei sistemi informatici, la mancanza di solidi principi teorici su cui basare le tecniche di progettazione. Il corso di algoritmi e principi dell'informatica ha lo scopo di colmare questa lacuna affrontando in maniera sistematica i problemi fondamentali dell’informatica e mettendo in evidenza come un approccio rigoroso e basato sui fondamenti teorici della disciplina abbia grande rilevanza nelle applicazioni pratiche. Soprattutto il corso intende sviluppare l'attitudine ad affrontare problemi nuovi e non ben precisati e ricavarne un modello preciso e adatto all'individuazione della miglior (o adeguata) soluzione.
 i casi normali).
 
 ## Risultati di apprendimento attesi
@@ -14,7 +14,7 @@ i casi normali).
 
 **1. I modelli dell'informatica** 
 - Automi (a stati finiti, a pila, Macchine di Turing)
-- Modelli nondeterministici (automi)
+- Modelli non deterministici (automi)
 - Grammatiche
 - Introduzione alla logica matematica 
 - Uso della logica matematica per modellare sistemi e descriverne proprietà.
