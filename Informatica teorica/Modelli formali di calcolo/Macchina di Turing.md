@@ -23,17 +23,17 @@ E può effettuare come azioni:
 Per convenzione si etichettano gli archi con formato: $$\langle i,\space (A_{1},\cdots, A_{k}) / w, \space (A_{1}',\cdots, A_{k}'),\space (m_{\text{in}}, m_{1},\cdots, m_{k}, m_{k+1}) \rangle$$
 Con $m_{\text{in}}\in\set{\text{L},\text{S},\text{R}}$ mossa della testina di input, $m_{1\cdots k}\in\set{\text{L},\text{S},\text{R}}$ mosse delle memorie e $m_{k+1}\in\set{\text{S},\text{R}}$ mossa della testina di output. Inoltre consideriamo la pila inizializzata con $Z_{0}$ per marcare il fondo.
 
-### TM riconoscitore
+### MT riconoscitore
 >[!note] 
->La funzione di transizione di una TM riconoscitore è definita come: $$\delta: Q\times(I\cup\set{\blank})\times \Gamma^{k}\to Q\times \Gamma^{k}\times \set{\text{L},\text{S},\text{R}}^{k+1}$$
+>La funzione di transizione di una MT riconoscitore è definita come: $$\delta: Q\times(I\cup\set{\blank})\times \Gamma^{k}\to Q\times \Gamma^{k}\times \set{\text{L},\text{S},\text{R}}^{k+1}$$
 
 >[!example] Esempio riconoscitore di $L=\set{a^{n}b^{n}c^{n}\space|\space n>0}$
 >![[Pasted image 20250416135822.png|center]]
-### TM traduttore
+### MT traduttore
 >[!note]
 >La funzione di traduzione di una MT traduttore è definita come: $$\eta: Q\times (I\cup \set{\blank})\times \Gamma^{k}\to (O\cup\set{\blank})\times\set{\text{S},\text{R}}$$
 
-### Configurazione e transizione di una TM
+### Configurazione e transizione di una MT
 >[!note]
 >Di base, tutti i nastri di memoria sono pieni di $\blank$, tranne nella posizione iniziale della rispettiva testina, dove c'è $Z_{0}$. Si ha inoltre come stato iniziale dell'organo di controllo $q_{0}$, e la strina di ingresso $x$ è scritta a partire della $0^{a}$ cella del nastro di ingresso, seguita e preceduta da $\blank$. Mentre il nastro di uscita è riempito con $\blank$.
 >
@@ -41,9 +41,9 @@ Con $m_{\text{in}}\in\set{\text{L},\text{S},\text{R}}$ mossa della testina di in
 >
 >Una stringa $x$ in ingresso è accettata se e solo se in un numero finito di transizioni, la macchina si ferma in $q\in F$.
 
-### Proprietà di una TM
+### Proprietà di una MT
 >[!note]
->Si ha che una TM è chiusa a $\cup$, $\cap$, $.$, $*$, ma non al complemento.
+>Si ha che una MT è chiusa a $\cup$, $\cap$, $.$, $*$, ma non al complemento.
 
 ### Modelli equivalenti
 >[!note]

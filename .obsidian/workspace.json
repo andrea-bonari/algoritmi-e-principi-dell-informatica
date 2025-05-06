@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e768c583183da6af",
+        "id": "c18fef7254c553b4",
         "type": "tabs",
         "children": [
           {
-            "id": "124e971d40339bf2",
+            "id": "d29a9773f5ea9e62",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Informatica teorica/Teoria della calcolabilità/Logica matematica.md",
+                "file": "Algoritmi e strutture dati/Strutture dati/Liste semplicemente connesse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Logica matematica"
+              "title": "Liste semplicemente connesse"
             }
           }
         ]
@@ -166,16 +166,28 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "124e971d40339bf2",
+  "active": "d29a9773f5ea9e62",
   "lastOpenFiles": [
     "index.md",
+    "Algoritmi e strutture dati/Strutture dati/Mazzo.md",
+    "Algoritmi e strutture dati/Strutture dati/Pila.md",
+    "Algoritmi e strutture dati/Strutture dati/Coda.md",
+    "Algoritmi e strutture dati/Strutture dati/Liste semplicemente connesse.md",
+    "Algoritmi e strutture dati/Strutture dati/Vettori.md",
+    "Algoritmi e strutture dati/Strutture dati/Strutture dati.md",
     "Algoritmi e strutture dati/Teoria della complessità/Complessità degli algoritmi.md",
+    "Untitled.md",
+    "data/quick.webp",
+    "data/merge.webp",
+    "data/insertion.webp",
+    "data/counting.webp",
+    "data/Pasted image 20250430190201.png",
     "Algoritmi e strutture dati/Teoria della complessità/Complessità del calcolo.md",
-    "Algoritmi e strutture dati/Teoria della complessità/Untitled",
+    "Informatica teorica/Modelli formali di calcolo/Macchina di Turing.md",
     "Informatica teorica/Teoria della calcolabilità/Logica matematica.md",
+    "Algoritmi e strutture dati/Teoria della complessità/Untitled",
     "Informatica teorica/Teoria della calcolabilità/Teoria della computazione.md",
     "Informatica teorica/Modelli formali di calcolo/Grammatiche.md",
-    "Informatica teorica/Modelli formali di calcolo/Macchina di Turing.md",
     "Informatica teorica/Modelli formali di calcolo/Automi a stati finiti.md",
     "Informatica teorica/Modelli formali di calcolo/Linguaggio formale.md",
     "Informatica teorica/Modelli formali di calcolo/Automi a pila.md",
@@ -187,11 +199,6 @@
     "data/Pasted image 20250416135822.png",
     "data/Pasted image 20250416132712.png",
     "data/Pasted image 20250415160044.png",
-    "data/Pasted image 20250415155824.png",
-    "data/Pasted image 20250415153726.png",
-    "data/Pasted image 20250414165157.png",
-    "data/Pasted image 20250414164539.png",
-    "data/Pasted image 20250310185230.png",
     "Introduzione al corso.md",
     "data",
     "Algoritmi e strutture dati/Strutture dati",
@@ -206,13 +213,6 @@
     "Equazioni differenziali/EDO del primo ordine/EDO del primo ordine.md",
     "Equazioni differenziali/EDO del secondo ordine/EDO del secondo ordine lineari.md",
     "Spazio n-dimensionale/Spazio n-dimensionale.md",
-    "Spazio n-dimensionale/Sottoinsiemi di uno spazio n-dimensionale.md",
-    "Spazio n-dimensionale/Funzioni a più variabili.md",
-    "Serie di funzioni/Serie di funzioni.md",
-    "Spazio n-dimensionale/Parametrizzazione del sostegno di una curva.md",
-    "Spazio n-dimensionale/Curve in uno spazio n-dimensionale.md",
-    "Serie di funzioni/Serie di potenze reali.md",
-    "Serie di funzioni/Serie di funzioni trigonometriche.md",
     "Equazioni differenziali/Studio qualitativo"
   ]
 }
