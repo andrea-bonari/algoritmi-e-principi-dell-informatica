@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Strutture dati/Liste semplicemente connesse.md",
+                "file": "Informatica teorica/Teoria della calcolabilità/Logica matematica.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Liste semplicemente connesse"
+              "title": "Logica matematica"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "nil",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -168,25 +168,33 @@
   },
   "active": "d29a9773f5ea9e62",
   "lastOpenFiles": [
+    "Algoritmi e strutture dati/Strutture dati/Grafi.md",
     "index.md",
-    "Algoritmi e strutture dati/Strutture dati/Mazzo.md",
-    "Algoritmi e strutture dati/Strutture dati/Pila.md",
-    "Algoritmi e strutture dati/Strutture dati/Coda.md",
-    "Algoritmi e strutture dati/Strutture dati/Liste semplicemente connesse.md",
+    "Algoritmi e strutture dati/Strutture dati/Alberi.md",
+    "Informatica teorica/Teoria della calcolabilità/Teoria della computazione.md",
+    "Algoritmi e strutture dati/Strutture dati/Mucchi.md",
     "Algoritmi e strutture dati/Strutture dati/Vettori.md",
+    "Algoritmi e strutture dati/Strutture dati/Code con priorità.md",
+    "Algoritmi e strutture dati/Strutture dati/Pile.md",
     "Algoritmi e strutture dati/Strutture dati/Strutture dati.md",
+    "Algoritmi e strutture dati/Strutture dati/Mazzi.md",
+    "Algoritmi e strutture dati/Strutture dati/Dizionari.md",
+    "Algoritmi e strutture dati/Strutture dati/Code.md",
+    "data/Pasted image 20250514160715.png",
+    "data/Pasted image 20250514160609.png",
+    "Algoritmi e strutture dati/Teoria della complessità/Complessità del calcolo.md",
     "Algoritmi e strutture dati/Teoria della complessità/Complessità degli algoritmi.md",
+    "Algoritmi e strutture dati/Strutture dati/Liste semplicemente connesse.md",
+    "Introduzione al corso.md",
     "Untitled.md",
     "data/quick.webp",
     "data/merge.webp",
     "data/insertion.webp",
     "data/counting.webp",
     "data/Pasted image 20250430190201.png",
-    "Algoritmi e strutture dati/Teoria della complessità/Complessità del calcolo.md",
     "Informatica teorica/Modelli formali di calcolo/Macchina di Turing.md",
     "Informatica teorica/Teoria della calcolabilità/Logica matematica.md",
     "Algoritmi e strutture dati/Teoria della complessità/Untitled",
-    "Informatica teorica/Teoria della calcolabilità/Teoria della computazione.md",
     "Informatica teorica/Modelli formali di calcolo/Grammatiche.md",
     "Informatica teorica/Modelli formali di calcolo/Automi a stati finiti.md",
     "Informatica teorica/Modelli formali di calcolo/Linguaggio formale.md",
@@ -197,9 +205,6 @@
     "data/Pasted image 20250416145144.png",
     "data/Pasted image 20250416144929.png",
     "data/Pasted image 20250416135822.png",
-    "data/Pasted image 20250416132712.png",
-    "data/Pasted image 20250415160044.png",
-    "Introduzione al corso.md",
     "data",
     "Algoritmi e strutture dati/Strutture dati",
     "Algoritmi e strutture dati/Algoritmi",
@@ -208,11 +213,6 @@
     "Informatica teorica/Modelli formali di calcolo",
     "Algoritmi e strutture dati",
     "Informatica teorica",
-    "Equazioni differenziali/EDO del secondo ordine/EDO del secondo ordine lineari non omogenee.md",
-    "Sistemi differenziali lineari/Sistemi differenziali lineari.md",
-    "Equazioni differenziali/EDO del primo ordine/EDO del primo ordine.md",
-    "Equazioni differenziali/EDO del secondo ordine/EDO del secondo ordine lineari.md",
-    "Spazio n-dimensionale/Spazio n-dimensionale.md",
     "Equazioni differenziali/Studio qualitativo"
   ]
 }
