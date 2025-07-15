@@ -48,6 +48,9 @@
 >Il pumping lemma afferma che se $\exists x\in L$, dove $L$ è un linguaggio riconosciuto da un FSA, con $|x|\geq |Q|$ (dove $Q$ è l'insieme degli stati), allora esistono $q\in Q$ e $w\in I^{+}$ tali che $x=y.w.z$ con $y,z\in I^{*}$ e $\delta^{*}(q,w)=q$, cioè esiste una sottostringa di $x$ che viene riconosciuta dall'automa effettuando un'iterazione su un ciclo di stati.
 >
 >Dal pumping lemma consegue che $y.w^{n}.z\in L\quad \forall n\geq0$, che segue dal poter effettuare zero o più iterazioni del ciclo.
+>
+>$$\exists x\in  L_\text{FSA}\space |x|\geq |Q|\Longrightarrow \exists u,v,w\in I \quad|\quad x= u.w.z\quad |uv|\leq n,\space v\neq\varepsilon\quad\forall k\in\mathbb{N}\quad u.v^{k}.w\in L_\text{FSA}$$
+
 
 Si può dire, con la condizione $L=\emptyset$, se $\exists x \in L$ allora $\exists y\in L\quad |y|<|Q|$, cioè che se una parola ha "cicli di riconoscimento" è possibile eliminarli, ed è possibile dare in pasto le $y$ all FSA e verificare se almeno una appartiene a $L$. 
 

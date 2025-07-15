@@ -18,3 +18,4 @@
 >- `PopBack(Q)`: se $n>0$, restituisce `A[tail]` corrente, decrementa `n`, decrementa `tail` $\mathcal{O}(1)$
 >- `PushFront(Q,e)`: $n<l$, decrementa `head`, inserisce l'elemento `e` in `A[head]` e incrementa $n$ $\mathcal{O}(1)$
 >- `Empty(Q)`: restituisce `n = 0` $\mathcal{O}(1)$
+

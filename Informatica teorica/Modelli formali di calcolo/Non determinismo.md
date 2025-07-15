@@ -41,6 +41,6 @@ Allora la $x$ è accettata nella computazione precedente, ma continua ad esserlo
 >[!note]
 >Si ha che la funzione di transizione $\delta$ diventa $\delta: Q\times I \times \Gamma^{k}\to \wp(Q\times \Gamma^{k}\times\set{\text{L},\text{S},\text{R}})$. La configurazione, transizione, sequenza di transizioni e accettazione sono definite come negli altri casi. È possibile rappresentare una computazione con un grafico ad albero che rappresenta tutte le computazioni accettanti e non accettanti.
 
-Si ha che $x$ è accettata da una MT ND solo se esiste un calcolo che termina in uno stato di accettazione. È possibile emulare una MT ND con una MT D, per farlo si percorre l'albero delle computazioni ND per stabilire se esiste un percorso che termina in uno stato di accettazione. Nel caso di un albero normale, esisto algoritmo consolidati per effettuare questa visita.
+Si ha che $x$ è accettata da una MT ND solo se esiste un calcolo che termina in uno stato di accettazione. È possibile emulare una MT ND con una MT D, per farlo si percorre l'albero delle computazioni ND per stabilire se esiste un percorso che termina in uno stato di accettazione. Nel caso di un albero normale, esistono algoritmi consolidati per effettuare questa visita.
 
-Nel caso di un albero in cui le computazioni non terminano si costruisce una MT D che scandisce le configurazioni della ND a partire dalle più vicine a $c_{0}$
+Nel caso di un albero in cui le computazioni non terminano si costruisce una MT D che scandisce le configurazioni della ND a partire dalle più vicine a $c_{0}$.

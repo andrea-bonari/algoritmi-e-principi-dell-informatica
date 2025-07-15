@@ -34,11 +34,11 @@ Per semplicità di notazione, indicheremo gli elementi $p\in P\quad p=\langle \a
 >| Tipo | Nome                      | Limitazione                                                                                                 |
 >| ---- | ------------------------- | ----------------------------------------------------------------------------------------------------------- |
 >| 0    | Non limitate              | nessuna                                                                                                     |
->| 1    | Monotone (non-decreasing) | $$ \|\alpha\|\leq \|\beta\| $$                                                                                |
->| 1    | Dipendenti dal contesto   | $$\alpha= \gamma A s\quad \beta= \gamma \chi \delta\qquad \chi\neq \varepsilon\text{ o } S\to \varepsilon$$ |
->| 2    | Libere dal contesto       | $$\alpha=1$$                                                                                                |
+>| 1    | Monotone (non-decreasing) | $$\alpha\to \beta\qquad \|\alpha\|\leq \|\beta\| $$                                                                                |
+>| 1    | Dipendenti dal contesto   | $$\alpha\to \beta\quad\alpha= \gamma A s\quad \beta= \gamma \chi \delta\qquad \chi\neq \varepsilon\text{ o } S\to \varepsilon$$ |
+>| 2    | Libere dal contesto       | $$\alpha\to \beta\quad\|\alpha\|=1$$                                                                                                |
 >| 3    | Regolari                  | Di forma $A\to a,\space A\to aA$ oppure $A\to a,\space A\to Aa$ con $a\in V_{t}$ e $A\in V_{n}$             |
-
+ 
 >[!tip] Conversione FSA - Grammatiche regolari
 >Per passare da un FSA ad una grammatica poniamo $V_{n}=Q$, $V_{t}=I$ e $S=\langle q_{0}\rangle$. Si ha che per ogni $\delta(q, i)=q'$ aggiungiamo $\langle q\rangle\to i\langle q'\rangle$ all'insieme $P$, e se $q'\in F$ per una data $\delta(q,i)=q'$, aggiungiamo anche $\langle q\rangle \to i$ all'insieme $P$. È dimostrabile per induzione che $\delta^{*}(q_{0}, x)=q'$ se e solo se $\langle q_{0}\rangle\Longrightarrow x\langle q'\rangle$.
 >

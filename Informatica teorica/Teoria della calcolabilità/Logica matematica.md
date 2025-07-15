@@ -37,7 +37,7 @@ Usiamo inoltre le seguenti abbreviazioni convenienti:
 - $y=x-1$ indica $x=S(y)$, cioè $x=y+1$, così come $y=x-k$ indica $x=y+k$
 - $\text{last}(x)$ indica $\lnot\exists y\space (y>x)$
 
-Definiamo il linguaggio definito da una formula come: $$L(\varphi)=\set{w\in I^{+}\space|\space \exists v:\space w,v\models \varphi}$$ con $\varphi$ formula chiusa.
+Definiamo il linguaggio definito da una formula come: $$L(\varphi)=\set{w\in I^{+}\space|\space \exists v:\space w,v\models \varphi}$$con $\varphi$ formula chiusa.
 
 I linguaggi esprimibili con MFO sono chiusi per unione, intersezione e complemento, tuttavia sono strettamente meno potenti degli FSA. Inoltre si ha che i linguaggi definiti da una formula MFO non sono chiusi rispetto alla $*$ di Kleene, e quindi un MFO è in grado di definire i linguaggi star-free, cioè linguaggi ottenuti per unione, intersezione, concatenazione e complemento di linguaggi finiti.
 

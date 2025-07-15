@@ -62,7 +62,7 @@ In un problema con risposta binaria per ogni input so a priori che è "si" o "no
 >Si ha che: $$|S|<2^{|S|}=|\wp(S)|$$
 >Dimostriamo che esiste una $f:S\to\wp(S)$ iniettiva, ma non suriettiva. Esiste una $f$ iniettiva, per esempio $f$ mappa $x\in S$ in $\set{x}\in\wp(S)$. Non esiste una $f$ suriettiva, consideriamo $T=\set{x\in S,\space x\notin f(x)}$. Supponiamo per assurdo, che esista una $f$ suriettiva, e quindi $T=f(x)$ dato che $T\in\wp(S)$ per costruzione: $$\begin{align*}
 >x\in T\iff x\in f(x)&\text{ per ipotesi}\\
->x\in T\iff x\notin f(x)&\text{ per la defizione di }T\\
+>x\in T\iff x\notin f(x)&\text{ per la definizione di }T\\
 >\end{align*}$$
 >Che è assurdo.
 
@@ -151,6 +151,24 @@ Non è possibile, con un formalismo RE, definire l'insieme di tutte e sole le $f
 >[!note]
 >Sia $F$ l'insieme di funzioni computabili e $S$ l'insieme degli indici delle MT che calcolano le funzioni di $F$, si ha che $S=\set{x\space |\space f_{x}\in F}$ è decidibile se e solo se $F=\emptyset$ o $F$ è l'insieme di tutte le funzioni computabili.
 
+>[!tip] Altri enunciati per il teorema di Rice
+>Sia data una qualunque enumerazione delle funzioni calcolabili e sia $F$ un qualunque insieme di funzioni calcolabili. L'insieme $S=\set{x\quad |\quad f_{x}\in F}$ è decidibile se e solo se $F$ è vuoto oppure $F$ coincide con l'insieme di tutte le funzioni calcolabili.
+>
+>---
+>
+>Sia $A\subseteq \mathbb{N}$ un insieme estensionale diverso da $\emptyset$ e da $\mathbb{N}$. $A$ è indecidibile.
+>
+>---
+>
+>Il teorema di Rice afferma che, per ogni proprietà non banale delle funzioni calcolabili, il problema di decidere quali funzioni soddisfino tale proprietà e quali no è indecidibile. Una proprietà banale è una proprietà che non effettua alcuna discriminazione tra le funzioni calcolabili, cioè che vale o per tutte o per nessuna.
+>
+>Quindi sia $P=\set{\mathcal{M}\quad|\quad\mathcal{M}\text{ è una MT che verifica la proprietà }\mathcal{P}}$ un linguaggio che soddisfa le seguenti condizioni:
+>$$\begin{align*}
+>\forall\mathcal{M}_{1},\mathcal{M}_{2}&\text{ MT tc } L(\mathcal{M}_{1})=L(\mathcal{M}_{2})\qquad \mathcal{M}_{1}\in P\iff\mathcal{M}_{2}\in P\\
+>\exists \mathcal{M}_{1},\mathcal{M}_{2}&\text{ MT tc }\mathcal{M}_{1}\in P\iff \mathcal{M}_{2}\notin P
+>\end{align*}$$
+>Allora $P$ è indecidibile.
+
 >[!example] Dimostrazione
 >Supponiamo, per assurdo, che $S$ sia decidibile, e $F$ sia non vuoto e diverso dall'insieme di tutte le funzioni computabili. Consideriamo: $$1_{S}=\begin{cases}
 >1\text{ se }f_{x}\in F \\
@@ -166,7 +184,11 @@ Non è possibile, con un formalismo RE, definire l'insieme di tutte e sole le $f
 
 Dire se un generico problema è (semi)decidibile o meno è un problema indecidibile. Tuttavia il teorema di Rice ci consente di mostrare che un teorema non è decidibile.
 
+Come conseguenze del teorema di rice possiamo dire che, non possiamo decidere se una MT:
+- Accetta $\emptyset$.
+- Accetta un linguaggio finito.
+- Accetta un linguaggio regolare.
+
 ### Tecnica di riduzione
  >[!note]
  >Se sono in grado di risolvere $y\in S'$ (cioè calcolare $1_{S'}(\cdot)$) e voglio risolvere $x\in S$, se ho una funzione $t$ calcolabile e totale tale per cui $x\in S\iff t(x)\in S'$, riduco il calcolare $x\in S$ a $t(x)\in S'$
- 
