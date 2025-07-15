@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Informatica teorica/Teoria della calcolabilità/Teoria della computazione.md",
+                "file": "Informatica teorica/Teoria della calcolabilità/Logica matematica.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Teoria della computazione"
+              "title": "Logica matematica"
             }
           }
         ]
@@ -168,8 +168,9 @@
   },
   "active": "d29a9773f5ea9e62",
   "lastOpenFiles": [
-    "Informatica teorica/Teoria della calcolabilità/Logica matematica.md",
+    "Informatica teorica/Modelli formali di calcolo/Non determinismo.md",
     "Informatica teorica/Teoria della calcolabilità/Teoria della computazione.md",
+    "Informatica teorica/Teoria della calcolabilità/Logica matematica.md",
     "Informatica teorica/Modelli formali di calcolo/Grammatiche.md",
     "Informatica teorica/Modelli formali di calcolo/Modelli di calcolo.md",
     "Informatica teorica/Modelli formali di calcolo/Macchina di Turing.md",
@@ -188,7 +189,6 @@
     "Algoritmi e strutture dati/Teoria della complessità/Complessità degli algoritmi.md",
     "index.md",
     "Formulario.md",
-    "Informatica teorica/Modelli formali di calcolo/Non determinismo.md",
     "Algoritmi e strutture dati/Strutture dati/Vettori.md",
     "Algoritmi e strutture dati/Strutture dati/Liste semplicemente connesse.md",
     "Algoritmi e strutture dati/Strutture dati/Code con priorità.md",
