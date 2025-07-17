@@ -15,6 +15,8 @@ In questo corso useremo la logica per specificare dei linguaggi formali, usando 
 >Dove il dominio delle variabili è un sottoinsieme finito di $\mathbb{N}$ da pensare come posizioni, e $<$ corrisponde alla relazione di minore tra le posizioni.
 >
 >Dati $w\in I^{+}$ e $V_{1}$ insieme delle variabili, un assegnamento è una funzione $v_{1}:V_{1}\to\set{0,1,\cdots,|w|-1}$.
+>
+>La MFO permette di descrivere la categoria di linguaggi star-free.
 
 >[!tip]
 >Definiamo alcune relazioni:
@@ -29,23 +31,32 @@ In questo corso useremo la logica per specificare dei linguaggi formali, usando 
 >- Costante $0$: $x=0\equiv \forall y(\lnot(y<x))$
 >- Funzione successore $S(x)$: $s(x)=y\equiv (x<y)\land\lnot\exists z(x<z\land z<y)$
 >- Costanti $1,2,\cdots$: rispettivamente $S(0),S(S(O)),\cdots$
+>  
+>Da qui possiamo definire le seguenti abbreviazioni:
+>- $y=x+k\qquad k\in\mathbb{N},k>1$ equivale a $y=\underbrace{S}_{k\text{ volte}}(x)$. Da qui possiamo anche definire $y=x-k\qquad k\in\mathbb{N},k>1$ che equivale a $x=\underbrace{S}_{k\text{ volte}}(x)$.
+>- $\text{last}(x)$ equivale a $\lnot\exists y(y<x)$, mentre $\text{first}(x)$ equivale a $\lnot\exists y(x<y)$.
 
 Si ha che $a(x)$ è vera se e solo se l'$x$-esimo elemento di una parola $w\in I^{*}$ è $a$.
 
-Usiamo inoltre le seguenti abbreviazioni convenienti:
-- $y=x+1$ indica $y=S(x)$, generalizzando, se $k\in\mathbb{N},\space k>1$ indichiamo $y=x+k$.
-- $y=x-1$ indica $x=S(y)$, cioè $x=y+1$, così come $y=x-k$ indica $x=y+k$
-- $\text{last}(x)$ indica $\lnot\exists y\space (y>x)$
-
 Definiamo il linguaggio definito da una formula come: $$L(\varphi)=\set{w\in I^{+}\space|\space \exists v:\space w,v\models \varphi}$$con $\varphi$ formula chiusa.
 
-I linguaggi esprimibili con MFO sono chiusi per unione, intersezione e complemento, tuttavia sono strettamente meno potenti degli FSA. Inoltre si ha che i linguaggi definiti da una formula MFO non sono chiusi rispetto alla $*$ di Kleene, e quindi un MFO è in grado di definire i linguaggi star-free, cioè linguaggi ottenuti per unione, intersezione, concatenazione e complemento di linguaggi finiti.
+>[!tip] Linguaggi star-free
+>I linguaggi esprimibili con MFO sono chiusi per unione, intersezione e complemento, tuttavia sono strettamente meno potenti degli FSA, poiché non sono chiusi rispetto alla $*$ di Kleene (da cui il nome star-free).
 
 ### Logica monadica del secondo ordine
 >[!note]
 >La logica monadica del secondo ordine (MSO) permette di quantificare predicati del primo ordine, e quindi ammettiamo formule come $\exists X\space(\varphi)$ con $X$ appartenente all'insieme dei predicati monadici. Per convenzione si usano le maiuscole per indicare variabili con domini l'insieme dei predicati monadici, e le minuscole per indicare variabili in $\mathbb{N}$.
 >
 >L'assegnamento di variabili del secondo ordine (insieme $V_{2}$) è una funzione $v_{2}: V_{2}\to\wp(\set{0,1,\cdots,|w|-1})$.
+
+Definiamo le seguenti formule utili:
+$$\begin{align*}
+\text{First}(x,P)&:=P(x)\land\forall y\space(y<x\Rightarrow\lnot P(y))\\
+\text{Last}(x,P)&:=P(x)\land\forall y\space(x<y\Rightarrow\lnot P(y))\\
+\text{Next(x,y,P)}&:= P(x)\land P(y)\land (x<y)\land\forall z\space((x<z\land z<y)\Rightarrow \lnot P(z))\\
+\text{Odd}(Q,P)&:= \forall x\space(Q(x)\Leftrightarrow(\text{First}(x,P)\lor\exists y \exists z\space(\text{Next}(z,x,P)\land\text{Next}(y,z,P)\land Q(y)))\\
+\text{OddCard}(P)&:=\exists Q\space(\text{Odd}(Q,P)\land \forall x\space (\text{Last}(x,P)\Rightarrow Q(x))\land \exists P(x)) 
+\end{align*}$$
 
 ### Teorema di Büchi-Elgot-Trakhtenbrot
 >[!note]
