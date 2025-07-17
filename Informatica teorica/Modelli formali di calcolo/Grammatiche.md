@@ -8,7 +8,6 @@
 >- Un assioma o simbolo iniziale $S\in V_{n}$
 >- Insieme delle produzioni sintattiche o regole di riscrittura $P\subseteq V_{n}^{+}\times V^{*}$
 >
->
 
 Le regola di una grammatica descrivono un "oggetto principale" come un insieme ordinato di "componenti". La descrizione è fornita fino ad arrivare al livello di dettaglio desiderato. Spesso si tende a chiamare lessico la descrizione grammaticale delle singole parole, sintassi quella della loro composizione.
 

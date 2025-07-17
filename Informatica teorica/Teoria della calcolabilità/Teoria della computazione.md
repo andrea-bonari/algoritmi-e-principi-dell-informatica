@@ -1,10 +1,11 @@
 >[!note]
 >Formalizziamo un calcolo come un problema per capire se $x\in L$, o di calcolare $y=\tau(x)$. Queste due formulazioni sono definite come:
 >- Sapendo $y=\tau(x)$, definisco $\tau(x)=1\iff x\in L$ e $\tau(x)=0\iff x\notin L$.
->- Avendo $\mathcal{M}$ che risolve $s\in L$, definisco $L_{\tau}=\set{x‡y\space |\space y=\tau(x)}$, poi per tutte le possibili stringhe $y$ chiedo a $\mathcal{M}$ se $x‡y\in L_{\tau}$. Se $\tau(x)$ è definita, prima o poi la macchina risponderà positivamente.
+>- Avendo una MT $\mathcal{M}$ che risolve $s\in L$, definisco $L_{\tau}=\set{x‡y\space |\space y=\tau(x)}$, poi per tutte le possibili stringhe $y$ chiedo a $\mathcal{M}$ se $x‡y\in L_{\tau}$. Se $\tau(x)$ è definita, prima o poi la macchina risponderà positivamente.
 
 >[!tip] Tesi di Church-Turing
 >Nel 1933, Gödel e Herbrand individuano un insieme di funzioni sugli interi che appaiono definire ciò che può essere calcolato manualmente.
+>
 >Nel 1936, Alonso Church definisce un altro sistema basato su funzioni ricorsive, il $\lambda$-calcolo, anch'esso in grado di descrivere tutte le funzioni "calcolabili operativamente".
 >Sempre nel 1936, Turing definisce quella che è la MT a nastro singolo tentando di fornire un formalismo per rappresentare tutto ciò che è "effettivamente calcolabile".
 >Kleene, Turing e Church dimostrano che i tre formalismo citati sono equivalenti, cioè definiscono lo stesso insieme di problemi.
@@ -15,10 +16,7 @@ Turing definisce computable una funzione che può essere calcolata da una proced
 
 ### Enumerazione algoritmica
 >[!note]
->Definiamo la enumerazione $\mathcal{E}$ di un insieme, cioè la corrispondenza biunivoca tra i suoi elementi e quelli di $\mathbb{N}$, è quindi una mappa: $\mathcal{E}: L\to \mathbb{N}$. Diciamo che $\mathcal{E}$ è effectively computable se esiste un algoritmo (o una MT) che la calcola.
-
->[!example] Esempio enumerazione algoritmica di $L=\set{a^{*}b^{*}}$
->Si ha che $\mathcal{E}$ etichetta le stringhe in ordine crescente di lunghezza, e se hanno la stessa lunghezza, etichetta in ordine lessicografico: $$\varepsilon\mapsto 0,\space a\mapsto 1,\space b\mapsto2,\space aa\mapsto 3,\space ab\mapsto 4,\space bb\mapsto 5,\space aaa\mapsto 6, \space\cdots$$
+>Definiamo la enumerazione $\mathcal{E}(\cdot)$ di un insieme, cioè la corrispondenza biunivoca tra i suoi elementi e quelli di $\mathbb{N}$, è quindi una mappa: $\mathcal{E}: L\to \mathbb{N}$. Diciamo che $\mathcal{E}$ è effectively computable se esiste un algoritmo (o una MT) che la calcola.
 
 >[!example] Dimostrazione
 >Consideriamo le MT a nastro singolo, con alfabeto $A=\set{0,1, \text{␢}}$ e $Q=\set{q_{0}, q_{1}}$. Osserviamo quali sono le possibili $\delta$ di queste MT. È possibile contare il numero di $\delta$ possibili e sapere quante MT a $2$ strati e $2$ lettere di alfabeto esistono.
@@ -27,13 +25,16 @@ Turing definisce computable una funzione che può essere calcolata da una proced
 >
 >Scegliendo un ordine arbitrario per l'insieme $\set{\text{MT}_{0},\cdots,\text{MT}_{19^{6}-1}}$, e allo stesso modo ordino le $(3\cdot3\cdot3+1)^{3\cdot3}=28^{9}$ MT. Numerando gli insiemi uno dopo l'altro ottengo un'enumerazione $\mathcal{E}:\text{MT}\to\mathbb{N}$.
 
-Si ha che $\mathcal{E}$ è algoritmica, e quindi è possibile scrivere un programma che, data $\delta$ mi fornisce il suo numero. Si ha che $\mathcal{E}(\mathcal{M})$ è detto numero di Gödel di $\mathcal{M}$, e $\mathcal{E}(\cdot)$ è detta gödelizzazione.
+Si ha che $\mathcal{E}$ è algoritmica, e quindi è possibile scrivere un programma che, data $\delta$ mi fornisce il suo numero.
 
-Definiamo $f_{i}$ come la funzione calcolata dall'$i$-esima MT. Si ha che $f_{i}(x)=\perp$ se e solo se $\mathcal{M}_{i}$ non si ferma quando riceve in ingresso $x$.
+Definiamo $\mathcal{E}(\mathcal{M})$ è detto numero di Gödel di $\mathcal{M}$, e $\mathcal{E}(\cdot)$ è detta gödelizzazione.
+Definiamo inoltre $f_{i}$ come la funzione calcolata dall'$i$-esima MT. Si ha quindi che $f_{i}(x)=\perp$ se e solo se $\mathcal{M}_{i}$ non si ferma quando riceve in ingresso $x$.
 
 ### Macchina di Turing universale
 >[!note]
->Si ha che esiste almeno una Macchina di Turing universale (MTU), cioè una MT che calcola $g(i, x)=f_{i}(x)$. La MTU non sembra essere dello stesso tipo delle altre $\mathcal{M}_{i}$, perché $f_{i}(\cdot)$ è funzione di una variabile, mentre $g_{i}(\cdot,\cdot)$ di due, tuttavia è possibile provare il contrario ricordando che $\mathbb{N}\times\mathbb{N}$ è enumerabile. È quindi possibile riformulare $g(i,x)=\hat{g}(n)=g(d^{-1}(n))$ tale per cui $g(i, x)=\hat{g}(d(i,x))$. La MTU lascia sul nastro $f_{i}(x)\iff M_{i}$ termina la computazione su $x$.
+>Si ha che esiste almeno una Macchina di Turing Universale (MTU) per ogni calcolo, cioè una MT $\mathcal{M}$ che calcola $g(i, x)=f_{i}(x)$.
+
+La MTU non sembra essere dello stesso tipo delle altre $\mathcal{M}_{i}$, questo perché $f_{i}(\cdot)$ è funzione di una variabile, mentre $g_{i}(\cdot,\cdot)$ di due, tuttavia è possibile provare il contrario ricordando che $\mathbb{N}\times\mathbb{N}$ è enumerabile. È quindi possibile riformulare $g(i,x)=\hat{g}(n)=g(d^{-1}(n))$ tale per cui $g(i, x)=\hat{g}(d(i,x))$. La MTU lascia sul nastro $f_{i}(x)\iff M_{i}$ termina la computazione su $x$.
 
 ### Definizione e risoluzione dei problemi
 >[!note]
@@ -41,46 +42,57 @@ Definiamo $f_{i}$ come la funzione calcolata dall'$i$-esima MT. Si ha che $f_{i}
 >Sappiamo anche che $|f:\mathbb{N}\to\set{0,1}|=2^{\aleph_{0}}=|\mathbb{R}|$. Quindi esistono almeno $2^{\aleph_{0}}$ funzioni, tuttavia esistono solo $\aleph_{0}$ MT, e quindi gran parte delle funzioni non è risolvibile algoritmicamente.
 >
 >Si ha inoltre che un problema definito su un linguaggio, a sua volta è definito sull'alfabeto $A$, che a sua volta è sottoinsieme di $A^{*}$, che è numerabile. Sappiamo quindi che: $$\text{problemi risolvibili}\subseteq\text{problemi definibili}$$
->Consideriamo ora una funzione: $$g(i, x)=\begin{cases}
->1\quad\text{se } f_{i}(x)\neq\perp \\
->0\quad\text{se } f_{i}(x)=\perp 
->\end{cases}$$
->Si ha che non esiste una MT che calcola $g$.
+>
+>Data una funzione $f:A\subseteq\mathbb{N}\to B\subseteq\mathbb{N}$, con $A,B$ finiti o effettivamente numerabili, essa si dice computabile se esiste una MT $\mathcal{M}$ che la calcola, e quindi $\forall n\in N:\quad f(n)=\mathcal{M}_{n}$.
 
-La non calcolabilità di $g$ ci dice che, nella pratica:
-- Non esiste un compilatore che possa dirci che il nostro programma andrà in loop su un dato input
-- Non possiamo costruire l'antivirus definitivo che sia in grado di capire a priori se un programma è malevolo
-- Non possiamo "creare un programma per tentativi ciechi" controllando solo a posteriori che sia quello corretto
+>[!tip] Halting problem
+>Consideriamo la funzione: $$g(i,x)=\begin{cases}
+>1\text{ se }f_{i}(x)\neq\perp \\
+>0\text{ se }f_{i}(x)=0
+>\end{cases}$$
+>Si ha che non esiste una MT $\mathcal{M}$ che calcola $g$, e quindi, nella pratica seguono conseguenze come:
+>- Inesistenza di un compilatore che possa dirci che il nostro programma andrà in loop su un dato input
+>- Inesistenza dell'antivirus definitivo che sia in grado di capire a priori se un programma è malevolo
+>- Impossibilità di "creare un programma per tentativi ciechi" controllando solo a posteriori che sia quello corretto
+>
+>>[!example] Dimostrazione
+>>Supponiamo che esista, e sia calcolabile una: $$g(i, x)=\begin{cases}
+>>1\text{ se } f_{i}(x)\neq\perp \\
+>>0\text{ se } f_{i}(x)=\perp
+>>\end{cases}$$
+>>Allora è calcolabile anche un: $$h(x)=\begin{cases}
+>>1\text{ se }g(x,x)=0 \\
+>>\perp\text{ altrimenti}
+>>\end{cases}$$
+>>Se $h$ è calcolabile, esiste una $x_{h}$ tale che $f_{x_{h}}=h$. A questo punto calcoliamo $h(x_{h})$.
+>>Se $h(x_{h})=1$, dato che $f_{x_{h}}=h$ si ha che $f_{x_{h}}(x_{h})=1$. Tuttavia per la definizione di $h$ abbiamo che $g(x_{h},x_{h})=0$, ma quindi per definizione di $g$, $f_{x_{h}}(x_{h})=\perp$ che è assurdo.
+>>Se $h(x_{h})=\perp$, dato che $f_{x_{h}}=h$ si ha che $f_{x_{h}}(x_{h})=\perp$. Tuttavia per la definizione di $h$ abbiamo che $g(x_{h},x_{h})=1$, ma quindi per definizione di $g$, $f_{x_{h}(x_{h})}\neq\perp$ che è assurdo.
+>>
+>>Intuitivamente, se ho un programma $g(i,x)$ in grado di dire se un generico altro programma $f_{i}$ termina, posso usarlo per costruire un altro programma $h$ che fa sempre sbagliare $g(i,x)$ nel determinare se quest'ultimo termina.
+
+>[!tip] Teorema di Cantor
+>Si ha che: $$|S|<2^{|S|}=|\wp(S)|$$
+>>[!example] Dimostrazione
+>>Dimostriamo che esiste una $f:S\to\wp(S)$ iniettiva, ma non suriettiva. Esiste una $f$ iniettiva, per esempio $f$ mappa $x\in S$ in $\set{x}\in\wp(S)$. Non esiste una $f$ suriettiva, consideriamo $T=\set{x\in S,\space x\notin f(x)}$. Supponiamo per assurdo, che esista una $f$ suriettiva, e quindi $T=f(x)$ dato che $T\in\wp(S)$ per costruzione: $$\begin{align*}
+>>x\in T\iff x\in f(x)&\text{ per ipotesi}\\
+>>x\in T\iff x\notin f(x)&\text{ per la definizione di }T\\
+>>\end{align*}$$
+>>Che è assurdo.
 
 Nel contesto della calcolabilità: posso sapere che esiste una MT che risolve il problema, anche se non sono in grado di dire quale sia tra le possibili. Supponiamo di avere una funzione $f$ di cui non siamo in grado di trovare un algoritmo che la calcola. Un modo di dimostrare che è calcolabile senza eseguire un algoritmo è:
 - mostrare che $f$ appartiene ad un insieme di funzioni $\mathfrak{F}$
 - mostrare che per ogni elemento di $\mathfrak{F}$ esiste una MT che lo calcola
 
-In un problema con risposta binaria per ogni input so a priori che è "si" o "no", e quindi che è risolvibile
-
->[!tip] Teorema di Cantor
->Si ha che: $$|S|<2^{|S|}=|\wp(S)|$$
->Dimostriamo che esiste una $f:S\to\wp(S)$ iniettiva, ma non suriettiva. Esiste una $f$ iniettiva, per esempio $f$ mappa $x\in S$ in $\set{x}\in\wp(S)$. Non esiste una $f$ suriettiva, consideriamo $T=\set{x\in S,\space x\notin f(x)}$. Supponiamo per assurdo, che esista una $f$ suriettiva, e quindi $T=f(x)$ dato che $T\in\wp(S)$ per costruzione: $$\begin{align*}
->x\in T\iff x\in f(x)&\text{ per ipotesi}\\
->x\in T\iff x\notin f(x)&\text{ per la definizione di }T\\
->\end{align*}$$
->Che è assurdo.
-
->[!example] Dimostrazione
->Supponiamo che esista, e sia calcolabile una: $$g(i, x)=\begin{cases}
->1\text{ se } f_{i}(x)\neq\perp \\
->0\text{ se } f_{i}(x)=\perp
->\end{cases}$$
->Allora è calcolabile anche un: $$h(x)=\begin{cases}
->1\text{ se }g(x,x)=0 \\
->\perp\text{ altrimenti}
->\end{cases}$$
->Se $h$ è calcolabile, esiste una $x_{h}$ tale che $f_{x_{h}}=h$. A questo punto calcoliamo $h(x_{h})$.
->Se $h(x_{h})=1$, dato che $f_{x_{h}}=h$ si ha che $f_{x_{h}}(x_{h})=1$. Tuttavia per la definizione di $h$ abbiamo che $g(x_{h},x_{h})=0$, ma quindi per definizione di $g$, $f_{x_{h}}(x_{h})=\perp$ che è assurdo.
->Se $h(x_{h})=\perp$, dato che $f_{x_{h}}=h$ si ha che $f_{x_{h}}(x_{h})=\perp$. Tuttavia per la definizione di $h$ abbiamo che $g(x_{h},x_{h})=1$, ma quindi per definizione di $g$, $f_{x_{h}(x_{h})}\neq\perp$ che è assurdo.
+### Computazione di problemi binari
+>[!note]
+>Dato un problema $P$ con input l'istanza del problema, e come output la scelta binaria "si" o "no", diciamo che:
+>- $P$ è decidibile se esiste una MT che avendo in input la codifica dell'istanza stampa la risposta corretta del problema. Inoltre il problema è deciso se la macchina è realizzabile. (basta una descrizione ad alto livello)
+>- $P$ è semidecidibile se esiste una MT che se la risposta è "si" termina sempre e stampa "si".
+>- $P$ è indecidibile altrimenti.
 >
->Intuitivamente, se ho un programma $g(i,x)$ in grado di dire se un generico altro programma $f_{i}$ termina, posso usarlo per costruire un altro programma $h$ che fa sempre sbagliare $g(i,x)$ nel determinare se quest'ultimo termina.
->
+>Il complementare del problema $P$ scambia le risposte "si" e "no".
+
+Nei casi in cui non sono presenti variabili in input in un problema $P$, il problema è decidibile.
 
 ### Decidibilità e semidecidibilità
 >[!note]
@@ -94,11 +106,9 @@ In un problema con risposta binaria per ogni input so a priori che è "si" o "no
 >- $S$ è l'immagine di una funzione totale e calcolabile $g_{S}$
 >- $S=I_{g_{S}}=\set{y\space|\space y=g_{S}(x)\quad x\in\mathbb{N}}$ cioè $S=\set{g_{S}(0),g_{S}(1),\cdots}$ da cui il nome ricorsivamente enumerabile
 >
->Il termine semidecidibile deriva dal fatto che:
->- Se $y\in S$, enumerando gli elementi di $S$ prima o poi trovo un valore di $x\in\mathbb{N}$ tale per cui $y=g_{S}(x)$
->- se $y\notin S$, non sono mai certo di poter rispondere "$y$ non appartiene a $S$" enumerando, potrei non aver ancora trovato $x\in\mathbb{N}$ tale per cui $y=g_{S}(x)$
+>Analizzando l'insieme direttamente, se $S\subseteq\mathbb{N}$, $S$ è ricorsivo se esiste una MT $\mathcal{M}$ tale che, ricevendo in input $n\in\mathbb{N}$, termina sempre e stampa "si" se $n\in S$, "no" se $n\notin S$.
 >
->Si ha che $\text{Decidibilità}\Rightarrow\text{Semidecidibilità}$. Si ha inoltre che $S$ è ricorsivo se e solo se sono ricorsivamente enumerabili sia $S$ che il suo complemento $\bar{S}=\mathbb{N}\smallsetminus S$. Si ha quindi che gli insiemi decidibili sono chiusi rispetto al complemento.
+>Se esiste una MT che termina e stampa "si" se $n\in S$, allora $S$ è ricorsivamente enumerabile (RE).
 
 >[!example] Dimostrazione
 >Se $S$ è vuoto, allora è RE per definizione. Assumendo $S\neq\emptyset$, e costruendo una funzione totale e calcolabile di cui $S$ è immagine, $\exists k\in S\Longrightarrow 1_{S}(k)=1$, definiamo $g_{S}$ come: $$g_{S}:\begin{cases}
@@ -107,11 +117,18 @@ In un problema con risposta binaria per ogni input so a priori che è "si" o "no
 >\end{cases}$$
 >Si ha che $g_{S}$ è calcolabile, totale e $I_{g_{S}}=S$, e quindi $S$ è RE.
 
+>[!tip] Proprietà della della decidibilità
+>Si ha che $\text{Decidibilità}\Rightarrow\text{Semidecidibilità}$. Si ha inoltre che $S$ è ricorsivo se e solo se sono ricorsivamente enumerabili sia $S$ che il suo complemento $\bar{S}=\mathbb{N}\smallsetminus S$. Si ha quindi che gli insiemi decidibili sono chiusi rispetto al complemento.
+
 >[!tip]
 >È equivalente dire che:
 >- $S$ è ricorsivamente enumerabile
 >- $S$ è il dominio $D_{h}$ di una funzione parziale calcolabile $S=\set{x\space |\space h(x)\neq\perp}$
 >- $S$ è il codominio $I_{g}$ di una funzione parziale calcolabile $S=\set{x\space|\space x=g(y)\space y\in\mathbb{N}}$
+
+Il termine semidecidibile deriva dal fatto che:
+- Se $y\in S$, enumerando gli elementi di $S$ prima o poi trovo un valore di $x\in\mathbb{N}$ tale per cui $y=g_{S}(x)$
+- se $y\notin S$, non sono mai certo di poter rispondere "$y$ non appartiene a $S$" enumerando, potrei non aver ancora trovato $x\in\mathbb{N}$ tale per cui $y=g_{S}(x)$
 
 Consideriamo $S=\set{x\space |\space f_{x}(x)\neq\perp}$, cioè il dominio $D_{h}$ della funzione $h(x)=f_{x}(x)$ che è calcolabile e parziale. Abbiamo quindi che $S$ è RE, e la sua indicatrice: $$1_{S}(x)=\begin{cases}
 1\text{ se }f_{x}(x)\neq\perp \\
@@ -151,24 +168,6 @@ Non è possibile, con un formalismo RE, definire l'insieme di tutte e sole le $f
 >[!note]
 >Sia $F$ l'insieme di funzioni computabili e $S$ l'insieme degli indici delle MT che calcolano le funzioni di $F$, si ha che $S=\set{x\space |\space f_{x}\in F}$ è decidibile se e solo se $F=\emptyset$ o $F$ è l'insieme di tutte le funzioni computabili.
 
->[!tip] Altri enunciati per il teorema di Rice
->Sia data una qualunque enumerazione delle funzioni calcolabili e sia $F$ un qualunque insieme di funzioni calcolabili. L'insieme $S=\set{x\quad |\quad f_{x}\in F}$ è decidibile se e solo se $F$ è vuoto oppure $F$ coincide con l'insieme di tutte le funzioni calcolabili.
->
->---
->
->Sia $A\subseteq \mathbb{N}$ un insieme estensionale diverso da $\emptyset$ e da $\mathbb{N}$. $A$ è indecidibile.
->
->---
->
->Il teorema di Rice afferma che, per ogni proprietà non banale delle funzioni calcolabili, il problema di decidere quali funzioni soddisfino tale proprietà e quali no è indecidibile. Una proprietà banale è una proprietà che non effettua alcuna discriminazione tra le funzioni calcolabili, cioè che vale o per tutte o per nessuna.
->
->Quindi sia $P=\set{\mathcal{M}\quad|\quad\mathcal{M}\text{ è una MT che verifica la proprietà }\mathcal{P}}$ un linguaggio che soddisfa le seguenti condizioni:
->$$\begin{align*}
->\forall\mathcal{M}_{1},\mathcal{M}_{2}&\text{ MT tc } L(\mathcal{M}_{1})=L(\mathcal{M}_{2})\qquad \mathcal{M}_{1}\in P\iff\mathcal{M}_{2}\in P\\
->\exists \mathcal{M}_{1},\mathcal{M}_{2}&\text{ MT tc }\mathcal{M}_{1}\in P\iff \mathcal{M}_{2}\notin P
->\end{align*}$$
->Allora $P$ è indecidibile.
-
 >[!example] Dimostrazione
 >Supponiamo, per assurdo, che $S$ sia decidibile, e $F$ sia non vuoto e diverso dall'insieme di tutte le funzioni computabili. Consideriamo: $$1_{S}=\begin{cases}
 >1\text{ se }f_{x}\in F \\
@@ -182,13 +181,26 @@ Non è possibile, con un formalismo RE, definire l'insieme di tutte e sole le $f
 >- $h_{S}(\bar{x})=i$: per definizione di $h_{S}(\cdot)$ abbiamo che $f_{\bar{x}}\notin F$, ma da quanto appena detto per il teorema di Kleene, $f_{\bar{x}}=f_{h_{S}(\overline{x})}=f_{i}$ da cui, per come definito $i$, $f_{i}\in F$, che è assurdo.
 >- $h_{S}(\bar{x})=j$: per definizione di $h_{S}(\cdot)$ abbiamo che $f_{\bar{x}}\in F$, ma da quanto appena detto per il teorema di Kleene $f_{\bar{x}}=f_{h_{S}(\bar{x})}=f_{j}$ da cui, per come definito $j$, $f_{j}\notin F$, che è assurdo.
 
-Dire se un generico problema è (semi)decidibile o meno è un problema indecidibile. Tuttavia il teorema di Rice ci consente di mostrare che un teorema non è decidibile.
+Un altro enunciato per il teorema di Rice è il seguente:
+Sia $\mathcal{P}$ una proprietà semantica non banale dei linguaggi accettati da MT. Allora il linguaggio: $$L_\mathcal{P} =\set{\mathcal{M}\space|\space L(\mathcal{M})\text{ ha la proprietà }\mathcal{P}}$$
+È indecidibile.
 
-Come conseguenze del teorema di rice possiamo dire che, non possiamo decidere se una MT:
-- Accetta $\emptyset$.
-- Accetta un linguaggio finito.
-- Accetta un linguaggio regolare.
+Non banale significa che esiste almeno una macchina $\mathcal{M}_{1}$ tale che $L(\mathcal{M}_{1})$ ha $\mathcal{P}$, e una $\mathcal{M}_{2}$ tale che $L(\mathcal{M}_{2})$ non ha $\mathcal{P}$.
+
+Semantica significa che riguarda il linguaggio accettato $L(\mathcal{M})$, cioè l'insieme delle stringhe accettate, non la struttura del codice della macchina.
+
+>[!tip]
+>Dire se un generico problema è (semi)decidibile o meno è un problema indecidibile. Tuttavia il teorema di Rice ci consente di mostrare che un teorema non è decidibile.
+>
+>Come conseguenze del teorema di rice possiamo dire che, non possiamo decidere se una MT:
+>- Accetta $\emptyset$.
+>- Accetta un linguaggio finito.
+>- Accetta un linguaggio regolare.
 
 ### Tecnica di riduzione
- >[!note]
- >Se sono in grado di risolvere $y\in S'$ (cioè calcolare $1_{S'}(\cdot)$) e voglio risolvere $x\in S$, se ho una funzione $t$ calcolabile e totale tale per cui $x\in S\iff t(x)\in S'$, riduco il calcolare $x\in S$ a $t(x)\in S'$
+>[!note]
+>Siano $X$ e $Y$ (sottoinsiemi o codificabili in $\mathbb{N}$) due problemi di decisione, cioè due insiemi di cui si vorrebbe risolvere il problema dell'appartenenza. Allora una funzione $f: X\to Y$, tale che $f$ è totale (definita su tutto il dominio) e computabile, e con $x\in X\iff f(x)\in Y$, $x\notin X\iff f(x)\notin Y$, allora $f$ è una riduzione da $X$ a $Y$.
+>
+>Se $f:X\to Y$ è una riduzione allora:
+>- Se $Y$ è ricorsivo allora lo è anche $X$
+>- Se $X$ non è ricorsivo allora non lo è neanche $Y$
