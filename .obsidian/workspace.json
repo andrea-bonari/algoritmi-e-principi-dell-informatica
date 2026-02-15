@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Informatica teorica/Modelli formali di calcolo/Grammatiche.md",
+                "file": "Algoritmi e strutture dati/Teoria della complessità/Complessità del calcolo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Grammatiche"
-            }
-          },
-          {
-            "id": "8ca0028055e24dbf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Informatica teorica/Teoria della calcolabilità/Teoria della computazione.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Teoria della computazione"
+              "title": "Complessità del calcolo"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -170,6 +155,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -181,75 +167,36 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "floating": {
-    "id": "5ef809bca731d328",
-    "type": "floating",
-    "children": [
-      {
-        "id": "fe517352e54c57df",
-        "type": "window",
-        "children": [
-          {
-            "id": "b3a0fa6250315267",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "0e787fd9734f6c59",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Teoremi per la risoluzione di esercizi.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "Teoremi per la risoluzione di esercizi"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 529,
-        "y": 306,
-        "width": 1576,
-        "height": 961,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "8ca0028055e24dbf",
+  "active": "d29a9773f5ea9e62",
   "lastOpenFiles": [
-    "Informatica teorica/Teoria della calcolabilità/Logica matematica.md",
-    "Informatica teorica/Teoria della calcolabilità/Teoria della computazione.md",
-    "Algoritmi e strutture dati/Teoria della complessità/Complessità degli algoritmi.md",
-    "Informatica teorica/Modelli formali di calcolo/Non determinismo.md",
-    "Informatica teorica/Modelli formali di calcolo/Macchina di Turing.md",
-    "Teoremi per la risoluzione di esercizi.md",
-    "Informatica teorica/Modelli formali di calcolo/Grammatiche.md",
     "index.md",
-    "Algoritmi e strutture dati/Strutture dati/Strutture dati.md",
-    "Algoritmi e strutture dati/Strutture dati/Mucchi.md",
-    "Algoritmi e strutture dati/Strutture dati/Pile.md",
-    "Algoritmi e strutture dati/Strutture dati/Vettori.md",
-    "Algoritmi e strutture dati/Teoria della complessità/Complessità del calcolo.md",
-    "Informatica teorica/Modelli formali di calcolo/Linguaggio formale.md",
     "Informatica teorica/Modelli formali di calcolo/Automi a pila.md",
-    "Informatica teorica/Modelli formali di calcolo/Automi a stati finiti.md",
-    "Informatica teorica/Modelli formali di calcolo/Modelli di calcolo.md",
+    "Algoritmi e strutture dati/Strutture dati/Mucchi.md",
+    "Algoritmi e strutture dati/Strutture dati/Strutture dati.md",
     "Algoritmi e strutture dati/Strutture dati/Alberi.md",
+    "Calcolo della complessità.md",
+    "Algoritmi.md",
     "Algoritmi e strutture dati/Strutture dati/Code.md",
     "Algoritmi e strutture dati/Strutture dati/Dizionari.md",
     "Algoritmi e strutture dati/Strutture dati/Grafi.md",
-    "Algoritmi e strutture dati/Strutture dati/Mazzi.md",
-    "Formulario.md",
     "Algoritmi e strutture dati/Strutture dati/Liste semplicemente connesse.md",
-    "Algoritmi e strutture dati/Strutture dati/Code con priorità.md",
+    "Algoritmi e strutture dati/Strutture dati/Mazzi.md",
+    "Algoritmi e strutture dati/Strutture dati/Pile.md",
+    "Algoritmi e strutture dati/Strutture dati/Vettori.md",
+    "Algoritmi e strutture dati/Teoria della complessità/Complessità del calcolo.md",
+    "Algoritmi e strutture dati/Teoria della complessità/Complessità degli algoritmi.md",
+    "Introduzione al corso.md",
+    "Informatica teorica/Teoria della calcolabilità/Logica matematica.md",
+    "Informatica teorica/Teoria della calcolabilità/Teoria della computazione.md",
+    "LTM.md",
+    "Teoremi per la risoluzione di esercizi.md",
+    "Informatica teorica/Modelli formali di calcolo/Non determinismo.md",
+    "Informatica teorica/Modelli formali di calcolo/Modelli di calcolo.md",
+    "Informatica teorica/Modelli formali di calcolo/Macchina di Turing.md",
+    "Informatica teorica/Modelli formali di calcolo/Automi a stati finiti.md",
+    "Informatica teorica/Modelli formali di calcolo/Grammatiche.md",
     "data/Pasted image 20250514160715.png",
     "data/Pasted image 20250514160609.png",
-    "Introduzione al corso.md",
     "data/quick.webp",
     "data/merge.webp",
     "data/insertion.webp",

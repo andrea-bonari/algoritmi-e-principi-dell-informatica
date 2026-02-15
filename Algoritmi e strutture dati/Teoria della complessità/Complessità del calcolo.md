@@ -23,12 +23,15 @@ Introduciamo una notazione per indicare il comportamento asintotico di una funzi
 
 È comune usare $f(n)=\mathcal{O}(g(n))$ al posto di $f(n)\in\mathcal{O}(g(n))$ come abuso di notazione.
 
-Se $\lim_{n\to\infty} \frac{f(n)}{g(n)}=0$ allora $f(n)\in \mathcal{O}(g(n))$.
+Se $\exists\lim_{n\to\infty} \frac{f(n)}{g(n)}=l$, allora $f(n)\in \mathcal{O}(g(n))$ se e solo se $l<+\infty$.
+
 ### Notazione $\Omega$-grande
 >[!note]
 >Definiamo $\Omega(g(n))$ come l'insieme di funzioni $f(n)$ con dominio in $\mathbb{N}$: >$$\Omega(g(n))=\set{f(n)\space|\space \exists c>0, n_{0}>0 \text{ tali che }\forall n>n_{0}\quad f(n)\geq c\cdot g(n)}$$
 
 Si ha che se e solo se $f(n)\in\mathcal{O}(g(n))$ allora $g(n)\in\Omega(f(n))$.
+
+Se $\exists\lim_{n\to\infty} \frac{f(n)}{g(n)}=l$, allora $f(n)\in \Omega(g(n))$ se e solo se $l>0$.
 
 ### Notazione $\Theta$-grande
 >[!note]
